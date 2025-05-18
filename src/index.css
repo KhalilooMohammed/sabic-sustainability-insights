@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +92,49 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-tajawal;
+  }
+  
+  /* RTL Support */
+  .rtl {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  /* SABIC Presentation Styles */
+  .slide-container {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+  }
+  
+  .slide {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .slide-header {
+    padding: 1.5rem;
+    background-color: theme('colors.sabic.primary');
+    color: white;
+  }
+  
+  .slide-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  .slide-footer {
+    padding: 0.75rem 1.5rem;
+    background-color: theme('colors.sabic.light');
+    font-size: 0.875rem;
+    color: theme('colors.sabic.dark');
+    display: flex;
+    justify-content: space-between;
   }
 }
