@@ -9,16 +9,12 @@ const Index = () => {
   useEffect(() => {
     toast({
       title: "مرحبًا بك في العرض التقديمي لتحليل شركة سابك",
-      description: "استخدم الأسهم للتنقل بين الشرائح. تم تحسين العرض ليناسب الشاشة بدون الحاجة للتمرير.",
+      description: "استخدم الأسهم للتنقل بين الشرائح",
       duration: 5000,
     });
   }, [toast]);
 
-  return (
-    <div className="h-screen overflow-hidden">
-      <Presentation />
-    </div>
-  );
+  return <Presentation />;
 };
 
 export default Index;

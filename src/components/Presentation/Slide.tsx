@@ -20,21 +20,18 @@ const Slide = ({
   isTitle = false,
 }: SlideProps) => {
   return (
-    <div className={cn("slide-container rtl animate-fade-in h-screen flex flex-col", className)}>
-      <div className="slide h-full flex flex-col">
+    <div className={cn("slide-container rtl animate-fade-in", className)}>
+      <div className="slide">
         {!isTitle && (
-          <div className="slide-header py-2">
+          <div className="slide-header">
             <h2 className="text-2xl font-bold">{title}</h2>
           </div>
         )}
-        <div className={cn(
-          "slide-content flex-grow flex flex-col", 
-          isTitle ? "items-center justify-center" : "px-4 py-2"
-        )}>
+        <div className={cn("slide-content", isTitle ? "flex items-center justify-center" : "")}>
           {children}
         </div>
         {!isTitle && (
-          <div className="slide-footer py-1 flex justify-between items-center">
+          <div className="slide-footer">
             <div>شركة سابك - تحليل استراتيجي</div>
             {slideNumber && totalSlides && (
               <div>{slideNumber} / {totalSlides}</div>
