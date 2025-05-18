@@ -1,11 +1,14 @@
-
 import Slide from "../Slide";
 import { Card } from "@/components/ui/card";
 import { Network, Users, Layers, BarChart3 } from "lucide-react";
-
-const Slide10 = ({ slideNumber, totalSlides }: { slideNumber: number, totalSlides: number }) => {
-  return (
-    <Slide title="تنفيذ الاستراتيجية – الهيكل والرقابة" slideNumber={slideNumber} totalSlides={totalSlides}>
+const Slide10 = ({
+  slideNumber,
+  totalSlides
+}: {
+  slideNumber: number;
+  totalSlides: number;
+}) => {
+  return <Slide title="تنفيذ الاستراتيجية – الهيكل والرقابة" slideNumber={slideNumber} totalSlides={totalSlides}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <Card className="p-5 mb-6 bg-white shadow-md">
@@ -24,7 +27,7 @@ const Slide10 = ({ slideNumber, totalSlides }: { slideNumber: number, totalSlide
               </div>
               
               {/* Line down from board */}
-              <div className="absolute h-8 w-0.5 bg-gray-300 top-16 left-1/2 transform -translate-x-1/2"></div>
+              
               
               {/* Middle level - CSO */}
               <div className="flex justify-center mb-8">
@@ -35,7 +38,7 @@ const Slide10 = ({ slideNumber, totalSlides }: { slideNumber: number, totalSlide
               </div>
               
               {/* Line down from CSO */}
-              <div className="absolute h-8 w-0.5 bg-gray-300 top-32 left-1/2 transform -translate-x-1/2"></div>
+              
               
               {/* Lower level - teams */}
               <div className="flex justify-between">
@@ -51,7 +54,7 @@ const Slide10 = ({ slideNumber, totalSlides }: { slideNumber: number, totalSlide
               </div>
               
               {/* Lines connecting CSO to teams */}
-              <div className="absolute w-3/4 h-0.5 bg-gray-300 top-40 left-1/2 transform -translate-x-1/2"></div>
+              
               <div className="absolute h-4 w-0.5 bg-gray-300 top-40 left-1/4 transform -translate-x-1/2"></div>
               <div className="absolute h-4 w-0.5 bg-gray-300 top-40 left-3/4 transform -translate-x-1/2"></div>
             </div>
@@ -93,7 +96,9 @@ const Slide10 = ({ slideNumber, totalSlides }: { slideNumber: number, totalSlide
                   <span className="text-sm bg-green-100 text-green-800 py-1 px-2 rounded">الهدف: 5%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-3">
-                  <div className="bg-green-600 h-3 rounded-full" style={{ width: '65%' }}></div>
+                  <div className="bg-green-600 h-3 rounded-full" style={{
+                  width: '65%'
+                }}></div>
                 </div>
                 <div className="flex justify-between mt-1 text-sm">
                   <span>الإنجاز الحالي: 3.2%</span>
@@ -107,7 +112,9 @@ const Slide10 = ({ slideNumber, totalSlides }: { slideNumber: number, totalSlide
                   <span className="text-sm bg-blue-100 text-blue-800 py-1 px-2 rounded">الهدف: 3 بحلول 2025</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-3">
-                  <div className="bg-blue-600 h-3 rounded-full" style={{ width: '33%' }}></div>
+                  <div className="bg-blue-600 h-3 rounded-full" style={{
+                  width: '33%'
+                }}></div>
                 </div>
                 <div className="flex justify-between mt-1 text-sm">
                   <span>الإنجاز الحالي: 1</span>
@@ -121,7 +128,9 @@ const Slide10 = ({ slideNumber, totalSlides }: { slideNumber: number, totalSlide
                   <span className="text-sm bg-purple-100 text-purple-800 py-1 px-2 rounded">الهدف: 15% سنويًا</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-3">
-                  <div className="bg-purple-600 h-3 rounded-full" style={{ width: '80%' }}></div>
+                  <div className="bg-purple-600 h-3 rounded-full" style={{
+                  width: '80%'
+                }}></div>
                 </div>
                 <div className="flex justify-between mt-1 text-sm">
                   <span>الإنجاز الحالي: 12%</span>
@@ -171,8 +180,6 @@ const Slide10 = ({ slideNumber, totalSlides }: { slideNumber: number, totalSlide
           </Card>
         </div>
       </div>
-    </Slide>
-  );
+    </Slide>;
 };
-
 export default Slide10;
