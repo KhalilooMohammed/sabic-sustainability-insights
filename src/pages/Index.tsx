@@ -14,7 +14,11 @@ const Index = () => {
     });
   }, [toast]);
 
-  return <Presentation />;
+  return (
+    <div className="h-screen overflow-hidden">
+      <Presentation />
+    </div>
+  );
 };
 
 export default Index;

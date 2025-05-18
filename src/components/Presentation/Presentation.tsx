@@ -59,7 +59,6 @@ const Presentation = () => {
   const swipeHandlers = useSwipeable({
     onSwipedRight: () => goToPrevSlide(),
     onSwipedLeft: () => goToNextSlide(),
-    preventDefaultTouchmoveEvent: true,
     trackMouse: true
   });
   

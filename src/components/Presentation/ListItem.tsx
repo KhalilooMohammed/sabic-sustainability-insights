@@ -8,7 +8,7 @@ interface ListItemProps {
   className?: string;
 }
 
-const ListItem = ({ children, type = "bullet", className = "" }: ListItemProps) => {
+export const ListItem = ({ children, type = "bullet", className = "" }: ListItemProps) => {
   return (
     <div className={`flex items-start gap-2 mb-2 animate-slide-in ${className}`}>
       {type === "check" && <Check className="text-sabic-primary mt-1 h-5 w-5 flex-shrink-0" />}
